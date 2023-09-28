@@ -1,14 +1,18 @@
-import { Header } from 'components/features/header/ui';
+// import { Header } from 'components/features/header/ui';
 import { Route, Routes } from 'react-router-dom';
-import PageWrapper from 'shared/components/PageWrapper';
+import { PageWrapper } from 'shared/components/PageWrapper';
+import { Currencies } from 'components/pages/currencies';
+import { Taxes } from 'components/pages/taxes';
+import { Header } from 'components/features/header/ui';
 
 const routesList = [
     { path: '/', element: <>Hello</> },
-    { path: '/currencies', element: <>qweqweqwe</> },
-    { path: '/taxes', element: <>asdasd </> },
+    { path: '/currencies', element: <Currencies /> },
+    { path: '/taxes', element: <Taxes /> },
+    { path: '/calculator', element: <></> },
 ];
 
-const Router = () => (
+export const Router = () => (
     <>
         <Header />
         <Routes>
@@ -18,5 +22,3 @@ const Router = () => (
         </Routes>
     </>
 );
-
-export default Router;
